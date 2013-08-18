@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="QN.master.cs" Inherits="Questionair.QN" %>
 
-<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 
 <!DOCTYPE html>
 
@@ -13,70 +13,100 @@
 <body>
     <form id="form1" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-    <div align="center">
-   <table border="0" cellpadding="0" cellspacing="0" width="1000px" style="background-color:#008299;font-size:10px;" id="myTable">
-    <tr>
-    <td align="center" style="width:auto;height:50px;" colspan="2">
-   
-    <asp:Label ID="Label1" runat="server" Text="แบบคัดครองความเสี่ยงต่อสุขภาพ" Font-Bold="True" Font-Names="Tahoma" Font-Size="25px" ForeColor="#FFFFFF"></asp:Label> 
-        </td>
-    </tr>
-    <tr>
-    <td align="left" style="width:auto;" colspan="2">
-     <!-- Start New -->
-     <div style="padding:10px 10px 5px 10px;">
-     <table border="0" cellspacing="1" cellpadding="1" width="990px" style="background-color:white;font-size:12px;">
-         <tr>
-             <td>
-                 <div style="float:right;display:block;padding:5px 5px 5px 5px;">
-                     <div style="width:400px;height:100px;border:2px solid #008299;">
-<table border="0" cellspacing="1" cellpadding="1" width="100%">
-<tr>
-    <td style="width:200px;text-align:right;">เลขที่</td>
-    <td style="width:200px;text-align:left;">
-        <telerik:RadTextBox ID="txtNo" Runat="server" Width="180px" Skin="Metro">
-        </telerik:RadTextBox>
-    </td>
-</tr>
-<tr>
-    <td style="width:200px;text-align:right;">หน่วยบริการที่ให้บริการคัดกรอง</td>
-    <td style="width:200px;text-align:left;">
-        <telerik:RadTextBox ID="txtNo0" Runat="server" Width="180px" Skin="Metro">
-        </telerik:RadTextBox>
-    </td>
-</tr>
-<tr>
-    <td style="width:200px;text-align:right;">วันที่ตรวจ</td>
-    <td style="width:200px;text-align:left;">
-        <telerik:RadDatePicker ID="RadDatePicker1" Runat="server" Skin="Metro" Culture="en-US">
-<Calendar UseRowHeadersAsSelectors="False" UseColumnHeadersAsSelectors="False" Skin="Metro"></Calendar>
+        <div align="center">
+            <table border="0" cellpadding="0" cellspacing="0" width="1000px" style="background-color: #008299; font-size: 10px;" id="myTable">
+                <tr>
+                    <td align="center" style="width: auto; height: 50px;" colspan="2">
 
-<DateInput DisplayDateFormat="dd MMM yyyy" DateFormat="dd MMM yyyy" LabelWidth="40%"></DateInput>
+                        <asp:Label ID="Label1" runat="server" Text="แบบคัดกรองความเสี่ยงต่อสุขภาพ" Font-Bold="True" Font-Names="Tahoma" Font-Size="25px" ForeColor="#FFFFFF"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="width: auto;" colspan="2">
+                        <!-- Start New -->
+                        <div style="padding: 10px 10px 5px 10px;">
+                            <table border="0" cellspacing="1" cellpadding="1" width="990px" style="background-color: white; font-size: 12px;">
+                                <tr>
+                                    <td>
+                                        <div style="float: right; display: block; padding: 5px 5px 5px 5px;">
+                                            <div style="width: 400px; height: 100px; border: 2px solid #008299;">
+                                                <table border="0" cellspacing="1" cellpadding="1" width="100%">
+                                                    <tr>
+                                                        <td style="width: 200px; text-align: right;">เลขที่ :</td>
+                                                        <td style="width: 200px; text-align: left;">
+                                                            <telerik:RadTextBox ID="txtNo" runat="server" Width="180px" Skin="Metro">
+                                                            </telerik:RadTextBox>
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="None"
+                                                                ValidationGroup="Head" ControlToValidate="txtNo" ErrorMessage="เลขที่<br />" ForeColor="Red" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 200px; text-align: right;">หน่วยบริการที่ให้บริการคัดกรอง :</td>
+                                                        <td style="width: 200px; text-align: left;">
+                                                            <telerik:RadTextBox ID="txtNo0" runat="server" Width="180px" Skin="Metro">
+                                                            </telerik:RadTextBox>
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="None"
+                                                                ValidationGroup="Head" ControlToValidate="txtNo0" ErrorMessage="หน่วยบริการที่ให้บริการคัดกรอง<br />" ForeColor="Red" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 200px; text-align: right;">วันที่ตรวจ :</td>
+                                                        <td style="width: 200px; text-align: left;">
+                                                            <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Skin="Metro" Culture="en-US">
+                                                                <Calendar UseRowHeadersAsSelectors="False" UseColumnHeadersAsSelectors="False" Skin="Metro"></Calendar>
 
-<DatePopupButton ImageUrl="" HoverImageUrl=""></DatePopupButton>
-        </telerik:RadDatePicker>
-    </td>
-</tr>
-</table> 
-                     </div>
+                                                                <DateInput DisplayDateFormat="dd MMM yyyy" DateFormat="dd MMM yyyy" LabelWidth="40%"></DateInput>
 
-                 </div>
-             </td>
-         </tr>
-     </table>
-     </div>
-     <!-- End New -->
-     </td>
-    </tr>
-    <tr align="center">
-    <td  style="width:475px;font-family: Tahoma; font-size: small; font-weight: bold;" valign="top" >
-        &nbsp;</td>
-         <td style="width:475px;" valign="top">
+                                                                <DatePopupButton ImageUrl="" HoverImageUrl=""></DatePopupButton>
+                                                            </telerik:RadDatePicker>
+                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="None"
+                                                                ValidationGroup="Head" ControlToValidate="RadDatePicker1" ErrorMessage="วันที่ตรวจ<br />" ForeColor="Red" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <telerik:RadButton ID="btnStandard" runat="server" OnClick="btnStandard_Click"
+                                                                Text="Submit" ValidationGroup="Head">
+                                                            </telerik:RadButton>
+                                                        </td>
+                                                    </tr>
+                                                </table>
 
-        </td>
-    </tr>
-    </table>
-    </div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <asp:ContentPlaceHolder ID="Content" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="float:left">
+                                        <asp:ValidationSummary ID="ValidationSummary1"
+                                            HeaderText="กรุณากรอกข้อมูลต่อไปนี้ :"
+                                            DisplayMode="BulletList"
+                                            EnableClientScript="true"
+                                            ForeColor="Red" ValidationGroup="Head"
+                                            runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- End New -->
+                    </td>
+                </tr>
+                
+                <tr align="center">
+                    <td style="width: 475px; font-family: Tahoma; font-size: small; font-weight: bold;" valign="top"></td>
+                    <td style="width: 475px;" valign="top"></td>
+                </tr>
+            </table>
+        </div>
     </form>
 </body>
 </html>
