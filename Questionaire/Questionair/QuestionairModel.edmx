@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QuestionairModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="QuestionairModelStoreContainer">
+          <EntitySet Name="tmp_Master" EntityType="QuestionairModel.Store.tmp_Master" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tmp_PartOne" EntityType="QuestionairModel.Store.tmp_PartOne" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tmp_Master">
+          <Key>
+            <PropertyRef Name="RefID" />
+          </Key>
+          <Property Name="RefID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tmp_PartOne">
+          <Key>
+            <PropertyRef Name="RefID" />
+          </Key>
+          <Property Name="RefID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Weight" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="Height" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="Education" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsMedicalExamination" Type="bit" />
+          <Property Name="BloodTest" Type="nvarchar(max)" />
+          <Property Name="Urinalysis" Type="nvarchar(max)" />
+          <Property Name="BloodPressure" Type="nvarchar(max)" />
+          <Property Name="BreastExamination" Type="nvarchar(max)" />
+          <Property Name="CervicalCancer" Type="nvarchar(max)" />
+          <Property Name="ECG" Type="nvarchar(max)" />
+          <Property Name="TomographyLung" Type="nvarchar(max)" />
+          <Property Name="OtherExam" Type="nvarchar(max)" />
+          <Property Name="IsCongenitalDisease" Type="bit" />
+          <Property Name="Health" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QuestionairModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuestionairEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tmp_Master" EntityType="QuestionairModel.tmp_Master" />
+          <EntitySet Name="tmp_PartOne" EntityType="QuestionairModel.tmp_PartOne" />
+        </EntityContainer>
+        <EntityType Name="tmp_Master">
+          <Key>
+            <PropertyRef Name="RefID" />
+          </Key>
+          <Property Type="Guid" Name="RefID" Nullable="false" />
+          <Property Type="String" Name="Number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Unit" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="tmp_PartOne">
+          <Key>
+            <PropertyRef Name="RefID" />
+          </Key>
+          <Property Type="Guid" Name="RefID" Nullable="false" />
+          <Property Type="Boolean" Name="Gender" />
+          <Property Type="Int32" Name="Age" />
+          <Property Type="Decimal" Name="Weight" Precision="5" Scale="2" />
+          <Property Type="Decimal" Name="Height" Precision="5" Scale="2" />
+          <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Education" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Position" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsMedicalExamination" />
+          <Property Type="String" Name="BloodTest" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Urinalysis" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BloodPressure" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BreastExamination" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CervicalCancer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ECG" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TomographyLung" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OtherExam" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsCongenitalDisease" />
+          <Property Type="String" Name="Health" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QuestionairModelStoreContainer" CdmEntityContainer="QuestionairEntities">
+          <EntitySetMapping Name="tmp_Master">
+            <EntityTypeMapping TypeName="QuestionairModel.tmp_Master">
+              <MappingFragment StoreEntitySet="tmp_Master">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tmp_PartOne">
+            <EntityTypeMapping TypeName="QuestionairModel.tmp_PartOne">
+              <MappingFragment StoreEntitySet="tmp_PartOne">
+                <ScalarProperty Name="Health" ColumnName="Health" />
+                <ScalarProperty Name="IsCongenitalDisease" ColumnName="IsCongenitalDisease" />
+                <ScalarProperty Name="OtherExam" ColumnName="OtherExam" />
+                <ScalarProperty Name="TomographyLung" ColumnName="TomographyLung" />
+                <ScalarProperty Name="ECG" ColumnName="ECG" />
+                <ScalarProperty Name="CervicalCancer" ColumnName="CervicalCancer" />
+                <ScalarProperty Name="BreastExamination" ColumnName="BreastExamination" />
+                <ScalarProperty Name="BloodPressure" ColumnName="BloodPressure" />
+                <ScalarProperty Name="Urinalysis" ColumnName="Urinalysis" />
+                <ScalarProperty Name="BloodTest" ColumnName="BloodTest" />
+                <ScalarProperty Name="IsMedicalExamination" ColumnName="IsMedicalExamination" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="RefID" ColumnName="RefID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

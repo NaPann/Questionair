@@ -10,123 +10,132 @@
 namespace Questionair {
     
     
-    public partial class QN {
+    public partial class Form2 {
         
         /// <summary>
-        /// head control.
+        /// BloodTest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.RadioButtonList BloodTest;
         
         /// <summary>
-        /// form1 control.
+        /// BloodPressure control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.RadioButtonList BloodPressure;
         
         /// <summary>
-        /// RadScriptManager1 control.
+        /// OtherExam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
+        protected global::Telerik.Web.UI.RadTextBox OtherExam;
         
         /// <summary>
-        /// Label1 control.
+        /// BloodTestAns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.RadioButtonList BloodTestAns;
         
         /// <summary>
-        /// txtNo control.
+        /// BloodPressureAns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtNo;
+        protected global::System.Web.UI.WebControls.RadioButtonList BloodPressureAns;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// OtherExamAns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RadioButtonList OtherExamAns;
         
         /// <summary>
-        /// txtNo0 control.
+        /// BloodTestReason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtNo0;
+        protected global::Telerik.Web.UI.RadTextBox BloodTestReason;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// BloodPressureReason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::Telerik.Web.UI.RadTextBox BloodPressureReason;
         
         /// <summary>
-        /// RadDatePicker1 control.
+        /// OtherExamReason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadDatePicker RadDatePicker1;
+        protected global::Telerik.Web.UI.RadTextBox OtherExamReason;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// rbIsCongenitalDisease control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbIsCongenitalDisease;
         
         /// <summary>
-        /// btnStandard control.
+        /// RadTextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnStandard;
+        protected global::Telerik.Web.UI.RadTextBox RadTextBox2;
         
         /// <summary>
-        /// Content control.
+        /// rbHealth control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Content;
+        protected global::System.Web.UI.WebControls.RadioButtonList rbHealth;
         
         /// <summary>
-        /// ValidationSummary1 control.
+        /// btnPrev control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::Telerik.Web.UI.RadButton btnPrev;
+        
+        /// <summary>
+        /// btnNext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnNext;
     }
 }

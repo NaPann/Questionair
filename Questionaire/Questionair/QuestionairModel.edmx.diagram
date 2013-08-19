@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="680fd3af43d24f3fbdd7d4552a1124ba" Name="Diagram1">
+        <EntityTypeShape EntityType="QuestionairModel.tmp_Master" Width="1.5" PointX="2.61158333467859" PointY="10.363407706079729" />
+        <EntityTypeShape EntityType="QuestionairModel.tmp_PartOne" Width="1.5" PointX="3.6180234493771679" PointY="5.7431843307536026" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
